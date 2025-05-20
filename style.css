@@ -1,0 +1,246 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Aplica scroll suave ao clicar nos links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilização moderna do header */
+
+header {
+    background-color: #1f1f1f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    color: white; /* Cor inicial do texto */
+    transition: color 0.3s ease; /* Para uma transição suave (opcional para a cor inicial) */
+}
+
+header:hover h1 {
+    background-image: linear-gradient(120deg, #A020F0, #4B0082);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Torna a cor do texto transparente para mostrar o gradiente do background */
+    transition: background-image 0.3s ease; /* Transição suave para o gradiente (opcional) */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu */
+
+nav ul {
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: transparent;
+  background-image: linear-gradient(120deg, #A020F0, #4B0082);
+  background-clip: text;
+}
+
+/* Espaço extra no topo das seções, por causa do header fixo */
+
+section {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Seção Sobre */
+
+#sobre {
+  background-color: #fff;
+  color: #333;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  margin-top: 90px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .sobre-img {
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+.sobre-texto {
+  flex: 1 1 300px;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sobre-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.sobre-img {
+  flex-grow: 1;
+  margin-left: auto;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+
+
+
+.skills {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Seção Projetos */
+
+#projetos {
+    background-color: #f4f4f4;
+    padding-top: 100px;
+}
+
+#projetos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.projetos-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 30px; 
+}
+
+.projeto-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card img {
+    width: 100%;
+    height: auto;
+}
+
+.projeto-card h3 {
+    margin: 15px;
+    font-size: 1.3rem;
+}
+
+.projeto-card p {
+    margin: 0 15px 15px;
+    flex: 1;
+}
+
+.projeto-card a {
+    display: block;
+    text-align: center;
+   background-image: linear-gradient(120deg, #A020F0, #4B0082);
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+}
+
+.projeto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button:hover {
+    background-color: #444c56;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+}
+
